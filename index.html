@@ -385,6 +385,17 @@
   .testi-card q{display:block; font-size:15px; line-height:1.6; font-style:italic; color:var(--ink); margin-top:18px;}
   .testi-card .who{font-size:14px; font-weight:700; color:var(--plum);}
   .testi-card .role{font-size:12px; color:var(--ink-faint);}
+  .testi-bubble{background:#fff; border:2px solid var(--c); border-radius:0; text-align:center; display:flex; flex-direction:column; align-items:center; margin-bottom:22px; --c:var(--plum);}
+  .testi-bubble.b-pink{--c:var(--magenta);} .testi-bubble.b-gold{--c:#F5C518;}
+  .testi-bubble::after{content:''; position:absolute; left:28px; bottom:-22px; width:40px; height:22px; background:var(--c); clip-path:polygon(0 0, 100% 0, 0 100%);}
+  .testi-bubble::before{content:''; position:absolute; left:30px; bottom:-18px; width:34px; height:19px; background:#fff; clip-path:polygon(0 0, 100% 0, 0 100%); z-index:1;}
+  .testi-bubble q{flex:1; text-align:left; margin-top:0; font-style:normal;}
+  .testi-bubble:not(.b-plum) q{}
+  .testi-bubble .who{font-size:15px; font-weight:500; color:var(--ink); margin-top:22px;}
+  .testi-bubble .role{color:var(--magenta); margin-bottom:14px;}
+  .testi-logo{width:100%; border-top:1px solid var(--pink-tint); padding-top:14px; min-height:64px; display:flex; align-items:center; justify-content:center;}
+  .testi-logo img{height:64px; width:auto; max-width:92%; object-fit:contain;}
+  .testi-logo .logo-text{font-size:28px; font-weight:800; color:var(--magenta); letter-spacing:-.5px;}
   .draft-tag{
     display:inline-block; margin-top:16px; font-size:10.5px; font-weight:700; text-transform:uppercase;
     letter-spacing:.04em; color:var(--magenta); background:var(--babypink); padding:4px 10px; border-radius:100px;
@@ -944,67 +955,47 @@
         <button class="scroll-btn" aria-label="Scroll right" onclick="scrollByCard('testiScroller',1)"><svg><use href="#ic-chevron-right"/></svg></button>
       </div>
       <div class="testi-grid" id="testiScroller">
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">MB</div>
-            <div>
-              <div class="who">Marketing Lead</div>
-              <div class="role">Personal Care, Vietnam</div>
-            </div>
-          </div>
-          <q>The accuracy of the leads is what surprised us most — no wasted budget chasing people who were never going to convert.</q>
-          
+        <div class="testi-card testi-bubble b-plum">
+          <q>WOOP is checking all our boxes in terms of <strong>cost-friendliness, scalability, and quality of lead</strong>. We have initiated our intention to work with WOOP in more markets. The team is fantastic and they <strong>never settle for less</strong>. We are in constant conversations to improve ways of working, and for that we are ever grateful to work with people like them.</q>
+          <div class="who">Melvin Sim,</div>
+          <div class="role">Head of CRM &amp; E-Commerce, APAC</div>
+          <div class="testi-logo"><img src="assets/logos/kimberly-clark.webp" alt="Kimberly-Clark"></div>
         </div>
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">CL</div>
-            <div>
-              <div class="who">CRM &amp; Loyalty Lead</div>
-              <div class="role">Infant Nutrition, Malaysia</div>
-            </div>
-          </div>
-          <q>WOOP became an extension of our own team — the kind of partner who flags an opportunity before we've even asked for it.</q>
-          
+        <div class="testi-card testi-bubble b-pink">
+          <q>Over the last few years, Reckitt has concentrated heavily on acquiring and activating qualified leads. WOOP has helped us <strong>scale up our targets significantly by offering higher leads each month while maintaining lower costs per engagement</strong>.</q>
+          <div class="who">Kirtiman Kohli,</div>
+          <div class="role">Head of Digital Marketing &amp; CRM, INDIA</div>
+          <div class="testi-logo"><img src="assets/logos/Reckitt_logo.svg.webp" alt="Reckitt"></div>
         </div>
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">AS</div>
-            <div>
-              <div class="who">Arijit Sengupta</div>
-              <div class="role">Head of Marketing – Indonesia, Reckitt Benckiser</div>
-            </div>
-          </div>
-          <q>With WOOP, we moved from superficial impressions to deeper engagement with consumers — very unique, compared to any other option in the market today, is this versatility combined with cost effectiveness.</q>
+        <div class="testi-card testi-bubble b-gold">
+          <q>We chose WOOP because they can target segments like <strong>Mothers, Diabetics, &amp; Caregivers</strong>. They don't give "just data", but engaged leads, which is why <strong>conversion on some brands is higher with WOOP leads vs. other platforms</strong>. They have not just helped us hit higher scales every month, but also reduced our overall cost per lead. Working with the team gives us a strong sense of how much our relationship is valued.</q>
+          <div class="who">Nicholas Goh,</div>
+          <div class="role">Head of Digital Marketing &amp; CRM, MY</div>
+          <div class="testi-logo"><img src="assets/logos/abbott.png" alt="Abbott"></div>
         </div>
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">PB</div>
-            <div>
-              <div class="who">Pooja Baid</div>
-              <div class="role">Director – Marketing, Health &amp; Wellness, Philips Avent India</div>
-            </div>
-          </div>
-          <q>WOOP offers a unique combination of rational and emotional motivations to consumers — generated multiple benefits: high quality peer advocacy, brand preference, content and also insights.</q>
+        <div class="testi-card testi-bubble b-plum">
+          <q>With WOOP, we were able to move from superficial impressions to a much deeper engagement with our consumers. It has helped us nurture a deep relationship with our women consumers that extends across different stages of the funnel from acquisition all the way to advocacy. What makes WOOP very unique, compared to any other option in the market today, is this versatility combined with cost effectiveness</q>
+          <div class="who">Arijit Sengupta,</div>
+          <div class="role">Head of Marketing – Indonesia</div>
+          <div class="testi-logo"><img src="assets/logos/Reckitt-Benckiser-logo.png" alt="Reckitt"></div>
         </div>
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">JM</div>
-            <div>
-              <div class="who">Jill Mills</div>
-              <div class="role">Marketing Manager, Mundipharma UK</div>
-            </div>
-          </div>
+        <div class="testi-card testi-bubble b-pink">
+          <q>WOOP offers a unique combination of rational and emotional motivations to consumers. This has helped us not only engage deeper but also sustain the engagement with our target consumer over a period of time. This deep engagement has generated multiple benefits - high quality peer advocacy, brand preference, content and also insights.</q>
+          <div class="who">Pooja Baid,</div>
+          <div class="role">Director – Marketing, Health &amp; Wellness, India</div>
+          <div class="testi-logo"><img src="assets/logos/philips-avent.png" alt="Philips Avent"></div>
+        </div>
+        <div class="testi-card testi-bubble b-gold">
           <q>The interactive engagement on WOOP through missions was a very innovative way to educate women. Deeper engagement, after all, is a precursor to purchase — the social impact part of WOOP truly makes this engagement model a win-win for everyone.</q>
+          <div class="who">Jill Mills,</div>
+          <div class="role">Marketing Manager, UK</div>
+          <div class="testi-logo"><img src="assets/logos/mundipharma-logo.png" alt="Mundipharma"></div>
         </div>
-        <div class="testi-card">
-          <div class="testi-top">
-            <div class="testi-avatar">LE</div>
-            <div>
-              <div class="who">Lester Estrada</div>
-              <div class="role">Marketing Director, P&amp;G Philippines</div>
-            </div>
-          </div>
+        <div class="testi-card testi-bubble b-plum">
           <q>More than 50% of the moms talked about Pampers on their own Facebook timeline — 300+ reviews in a short period of time, and most impressive was 500+ videos from moms and their babies using the brand jingle.</q>
+          <div class="who">Lester Estrada,</div>
+          <div class="role">Marketing Director, Philippines</div>
+          <div class="testi-logo"><img src="assets/logos/pg-logo.png" alt="P&amp;G"></div>
         </div>
       </div>
     </div>
