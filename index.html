@@ -1052,7 +1052,7 @@
       </div>
       <div class="footer-col">
         <h5>Get In Touch</h5>
-        <div id="footerEmail">hello@woop.world</div>
+        <div id="footerEmail">growth@woop.world</div>
         <a href="#" onclick="openBrief();return false;">Get a proposal</a>
       </div>
       <div class="footer-col">
@@ -1234,11 +1234,11 @@
   // Form" confirmation email from FormSubmit to that inbox; click it once
   // and every submission after that arrives silently.
   var CONFIG = {
-    salesEmail: "hello@woop.world" // TODO: confirm the right inbox — placeholder for now
+    salesEmail: "growth@woop.world" // TODO: confirm the right inbox — placeholder for now
   };
 
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('footerEmail').textContent = CONFIG.salesEmail || 'hello@woop.world';
+  document.getElementById('footerEmail').textContent = CONFIG.salesEmail || 'growth@woop.world';
 
   // ---- Mobile menu ----
   function toggleMobileMenu(){
@@ -1344,7 +1344,7 @@
     var subjectLine = 'Proposal request — ' + (brand || company || name || email);
     var subject = encodeURIComponent(subjectLine);
     var body = encodeURIComponent(lastBriefText);
-    document.getElementById('emailBriefLink').href = 'mailto:' + (CONFIG.salesEmail || 'hello@woop.world') + '?subject=' + subject + '&body=' + body;
+    document.getElementById('emailBriefLink').href = 'mailto:' + (CONFIG.salesEmail || 'growth@woop.world') + '?subject=' + subject + '&body=' + body;
 
     document.getElementById('briefFormWrap').hidden = true;
     document.getElementById('briefResultWrap').hidden = false;
@@ -1355,7 +1355,7 @@
     // Sends the brief straight to our inbox via FormSubmit's relay — no
     // mail-app popup for the visitor. Falls back to a mailto link only if
     // the request itself fails (network blocked, ad-blocker, etc).
-    fetch('https://formsubmit.co/ajax/' + (CONFIG.salesEmail || 'hello@woop.world'), {
+    fetch('https://formsubmit.co/ajax/' + (CONFIG.salesEmail || 'growth@woop.world'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
